@@ -10,6 +10,8 @@ import os
 print(os.getcwd())
 os.chdir("c:/Users/HS/Documents/GitHub/wine_multivariate_team")
 
+#%%
+plt.plot(redWine)
 #%%  
 import pandas as pd
 import numpy as np
@@ -39,7 +41,7 @@ from sklearn.svm import SVC, LinearSVC
 redWine = pd.read_csv('./data/redwine.csv')
 whiteWine = pd.read_csv('./data/whitewine.csv')
 
-redWine.describe()
+#redWine.describe()
 whiteWine.describe()
 #%%
 #Checking for duplicates
@@ -47,7 +49,8 @@ print("Number of duplicates in red wine: "+ str(np.sum(np.array(redWine.duplicat
 print("Number of duplicates in white wine:  "+ str(np.sum(np.array(whiteWine.duplicated()))))
 
 # Combining the red and white wine data
-wine_df = redWine.append(whiteWine)
+wine_df = whiteWine
+#.append(whiteWine)
 print(wine_df.shape)
 
 #%% summary
