@@ -29,6 +29,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import mean_squared_error, r2_score
 
+
 # Modelling Algorithms
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -36,12 +37,14 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC, LinearSVC
-
+#%%
+import mglearn
+import sklearn
 #%%
 redWine = pd.read_csv('./data/redwine.csv')
 whiteWine = pd.read_csv('./data/whitewine.csv')
 
-#redWine.describe()
+redWine.describe()
 whiteWine.describe()
 #%%
 #Checking for duplicates
@@ -49,7 +52,7 @@ print("Number of duplicates in red wine: "+ str(np.sum(np.array(redWine.duplicat
 print("Number of duplicates in white wine:  "+ str(np.sum(np.array(whiteWine.duplicated()))))
 
 # Combining the red and white wine data
-wine_df = whiteWine
+wine_df = redWine
 #.append(whiteWine)
 print(wine_df.shape)
 
@@ -169,4 +172,33 @@ print('Training Accuracy :: ', accuracy_score(y_train, clf.predict(X_train)))
 print('Test Accuracy :: ', accuracy_score(y_test, y_pred))
 #%%
 print(confusion_matrix(y_test, y_pred))
+
+
+#%%
+scaler=StandardScaler()
+scaler.fit(wine_df)
+X_scaled=scaler.transform(wine_df)
+#%%
+#mglearn.plots.wine_df()
+from sklearn.decomposition import PCA 
+#두개의 주성분만 유지
+pca=PCA(n_components=2)
+#와인 데이터로 PCA 모델을 만듦
+pca.fit(wine_df)
+
+#처음 두개의 주성분을 사용해 데이터 변환 
+X_pca= pca.transform(wine_df)
+print("원본 데이터 형태: {} ".format(str(X_scaled.shape)))
+print("축소된 데이터 형태 {}".format(str(X_pca.shape)))
+
+#%%
+plt.figure(figsize=(100,100))
+mglearn.discrete_sca tter(X_pca[:,0], X_pca[:,1],  wine_df )
+plt.legend()
+plt.gca().set_aspect("equal")
+
+
+
+
+
 
