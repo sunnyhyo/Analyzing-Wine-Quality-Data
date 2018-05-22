@@ -1,5 +1,6 @@
-# wine_multivariate_team
-red wine data 
+# Wine_Quality_Analysing
+2018, spring, mutivariate team project
+Red wine data 
 
 ## Purpose
 1. Finding factors that affect the quality of redwine.
@@ -14,4 +15,10 @@ Density etc
 3. Predicting the target values for new observations
 
 ## EDA
-### barplot
+### Variables
+
+
+
+
+
+
