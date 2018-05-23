@@ -1,4 +1,4 @@
-# Wine_Quality_Analysing
+# Analysing Wine Quality data
 2018, spring, mutivariate team project
 <br>Red wine data 
 <br>https://archive.ics.uci.edu/ml/datasets/wine+quality
