@@ -1,10 +1,11 @@
 # Wine_Quality_Analysing
 2018, spring, mutivariate team project
-Red wine data 
+<br>Red wine data 
+<br>https://archive.ics.uci.edu/ml/datasets/wine+quality
 
 ## Purpose
-1. Finding factors that affect the quality of redwine.
-(What are considered wine defects?)
+1. Finding factors that affect the quality of redwine
+<br>(What are considered wine defects?)
 2. Classification
 - **Quality (등급)** - 'good', 'average', 'bad’
 <br>variable: quality
