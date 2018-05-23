@@ -7,12 +7,13 @@ Red wine data
 (What are considered wine defects?)
 2. Classification
 - **Quality (등급)** - 'good', 'average', 'bad’
-quality
+<br>variable: quality
 - **Sweetness (당도)** - 'Dry', 'Medium Dry', 'Medium Sweet', 'Sweet'
-residual sugar etc
+<br>variable: residual sugar etc
 - **Body (무게감)** – light bodied, medium bodied, full- bodied
-Density etc
+<br>variable: Density etc
 3. Predicting the target values for new observations
+<br>traing set, test set, target error
 
 ## EDA
 ### Variables
