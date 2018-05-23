@@ -34,7 +34,5 @@ Density etc
 
 ### Summary
 ~~~
-<div>
-rr
-</div>
+
 ~~~
