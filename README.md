@@ -1,7 +1,7 @@
 # Analysing Wine Quality data
 2018, spring, mutivariate team project
-<br>- Red wine data 
-<br>- https://archive.ics.uci.edu/ml/datasets/wine+quality
+- Red wine data 
+- https://archive.ics.uci.edu/ml/datasets/wine+quality
 
 ## Purpose
 1. Finding factors that affect the quality of redwine
