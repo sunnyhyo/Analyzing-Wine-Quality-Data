@@ -135,3 +135,17 @@ ggplot(rw, aes(x=volatile.acidity))+
   ggtitle("Volatile Acidity & Quality") +
   xlab("Volatile Acidity") +
   ylab("Distribution Density")
+
+#
+boxplot(volatile.acidity~quality, data=rw,
+        main= "sulphates & Quality Data"  ,
+        xlab="Quality",
+        ylab="sulphates")
+
+ggplot(rw, aes(x=volatile.acidity))+
+  geom_density(aes(fill = "red", color = "red")) +
+  facet_wrap(~quality) +
+  theme(legend.position = "none") +
+  ggtitle("sulphates & Quality") +
+  xlab("sulphates") +
+  ylab("Distribution Density")
